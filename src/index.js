@@ -9,7 +9,7 @@ function init()
     document.getElementById("pixelInput").addEventListener("keyup", kep);
     document.getElementById("frameInput").addEventListener("keyup", kep);
     document.getElementById("color").addEventListener("input", kep);
-    document.getElementById("linkInput").addEventListener("input",submit);
+    document.getElementById("linkInput").addEventListener("click",submit);
 }
 
  let link;
