@@ -5,3 +5,14 @@
 .grid-container{
     font-size: 10px;
 }
+body{
+    background-color: white;
+    text-align: center;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+img{
+    width: 20px;
+}

@@ -2,24 +2,38 @@
 import 'bootstrap/dist/js/bootstrap.bundle.js'
 import 'bootstrap/dist/css/bootstrap.css';
 import './style.css';
- let link;
- let pixel = document.getElementById('pixelInput');
- let number = document.getElementById('frameInput');
 
+function init()
+{
+    document.getElementById("darkMode").addEventListener("click", darkmode);
+    document.getElementById("pixelInput").addEventListener("keyup", kep);
+    document.getElementById("frameInput").addEventListener("keyup", kep);
+    document.getElementById("color").addEventListener("input", kep);
+    document.getElementById("linkInput").addEventListener("input",submit);
+}
+
+ let link;
 
     function submit(){
          link = document.getElementById("linkInput");
         document.getElementById("showPic").src = link; 
     };
+    function kep() {
+        document.getElementById("showPic").style.width = document.getElementById("pixelInput").value + 'px';
+        document.getElementById("showPic").style.border = document.getElementById("frameInput").value + 'px solid';
+        document.getElementById("showPic").style.borderColor = document.getElementById("color").value;
+     }
     
     function darkmode(){
-        pixel = pixel.style.width(document.getElementById(showPic))
+        var element = document.body;
+        element.classList.toggle("darkMode");
     }
-    if(){
 
-    };
+   
 
-
+    document.addEventListener('DOMContentLoaded', init);
+    
+    
     
 
 //let picPixel = parseFloat( document.getElementById(pixelInput).value);
