@@ -6,40 +6,51 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  
+    <script src='main.js'></script>
 </head>
 <body>
     <p>This is a template</p>    
-    <script src='main.js'></script>
-    <div class="grid-container">
+    
+    <div class="row">
 
-        <div class="grid-item">
+        <div class="col-sm-3">
             <label for="urlInput">Kérlek add meg a képed url linkjét: </label>
-            <input type="url" id="linkInput">
+            <input type="text" id="linkInput">
         </div>
 
-        <div class="grid-item">
+        <div class="col-md-3">
             <label for="pixel mennyiseg">Kérlek add meg a kép pixel méretét: </label>
             <input type="number" id="pixelInput" min="1">
         </div>
 
-        <div class="grid-item">
+        <div class="col-sm-3">
             <label for="picFrame">Kérlek add meg a képkeret vastagságát pixelben: </label>
             <input type="number" min="1" max="100" id="frameInput">
         </div>
 
-        <div class="grid-item">
+        <div class="col-sm-3">
             <label for="colorPick">Kérlek válassz színt a képkeretednek: </label>
             <input type="color" id="color">
         </div>
-        <div class="grid-item">
-            <button onclick="submit" id="button">Megjelenítés</button>
+        <div class="col-sm-3">
+            <button onclick="submit" id="submit">Megjelenítés</button>
         </div>
 
     </div>
-    <div class="grid-container">
+    <div class="row">
         <div>
-            <label for="">A megjelenített kép:</label>
+            <label for="col-sm-12">A megjelenített kép:</label>
             <img src="" id="showPic"  alt="">
+        </div>
+
+    </div>
+    <div    class="row">
+        <div class="col-md-12">
+            <label class="switch">
+                <button  id="darkMode" onclick="darkmode" >dark/világos mód</button>
+              </label>
+
         </div>
     </div>
         
